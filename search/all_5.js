@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_0',['name',['../structperson.html#a9c24023eeded573e6927ef4c05c94edb',1,'person']]]
+  ['init_5fhash_5ftable_0',['init_hash_table',['../hashtable_8h.html#a7972b38eedba04f5dfa86a56f51a19b5',1,'hashtable.h']]]
 ];

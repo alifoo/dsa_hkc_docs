@@ -1,4 +1,5 @@
 var annotated_dup =
 [
-    [ "person", "structperson.html", "structperson" ]
+    [ "hashtable", "structhashtable.html", "structhashtable" ],
+    [ "Stack", "struct_stack.html", "struct_stack" ]
 ];

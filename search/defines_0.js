@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['max_5fname_0',['MAX_NAME',['../hashtable_8h.html#ac7c0207aa5a0e10d378be03b68041350',1,'hashtable.h']]]
+  ['deleted_5fnode_0',['DELETED_NODE',['../hashtable_8h.html#aa031b6a3a5b27df798daaacc350e45f7',1,'hashtable.h']]]
 ];

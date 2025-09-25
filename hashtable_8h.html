@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DSA Hacking Club Library: src/hashtable.h File Reference</title>
+<title>DSA Hacking Club Library: include/hashtable.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,27 +92,30 @@ $(function(){initNavTree('hashtable_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>This file contains the public interface for a simple hash table.  
+<p>A simple, generic hash table implementation using a dynamic struct.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for hashtable.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="hashtable_8h__incl.png" border="0" usemap="#asrc_2hashtable_8h" loading="lazy" alt=""/></div>
-<map name="asrc_2hashtable_8h" id="asrc_2hashtable_8h">
-<area shape="rect" title="This file contains the public interface for a simple hash table." alt="" coords="5,5,116,31"/>
-<area shape="rect" title=" " alt="" coords="23,79,98,105"/>
-<area shape="poly" title=" " alt="" coords="63,31,63,63,58,63,58,31"/>
+<div class="center"><img src="hashtable_8h__incl.png" border="0" usemap="#ainclude_2hashtable_8h" loading="lazy" alt=""/></div>
+<map name="ainclude_2hashtable_8h" id="ainclude_2hashtable_8h">
+<area shape="rect" title="A simple, generic hash table implementation using a dynamic struct." alt="" coords="24,5,157,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,80,105"/>
+<area shape="poly" title=" " alt="" coords="85,33,61,67,57,64,80,30"/>
+<area shape="rect" title=" " alt="" coords="104,79,173,105"/>
+<area shape="poly" title=" " alt="" coords="101,30,124,64,120,67,96,33"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="hashtable_8h__dep__incl.png" border="0" usemap="#asrc_2hashtable_8hdep" loading="lazy" alt=""/></div>
-<map name="asrc_2hashtable_8hdep" id="asrc_2hashtable_8hdep">
-<area shape="rect" title="This file contains the public interface for a simple hash table." alt="" coords="13,5,124,31"/>
-<area shape="rect" href="dsa__hkc_8h.html" title="The main header for the DSA Hacking Club library." alt="" coords="5,79,132,105"/>
-<area shape="poly" title=" " alt="" coords="71,46,71,79,66,79,66,46"/>
+<div class="center"><img src="hashtable_8h__dep__incl.png" border="0" usemap="#ainclude_2hashtable_8hdep" loading="lazy" alt=""/></div>
+<map name="ainclude_2hashtable_8hdep" id="ainclude_2hashtable_8hdep">
+<area shape="rect" title="A simple, generic hash table implementation using a dynamic struct." alt="" coords="5,5,139,31"/>
+<area shape="rect" href="dsa__hkc_8h.html" title="The main header for the DSA Hacking Club library." alt="" coords="9,79,135,105"/>
+<area shape="poly" title=" " alt="" coords="75,46,75,79,69,79,69,46"/>
 </map>
 </div>
 </div>
@@ -120,65 +123,119 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:person" id="r_person"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structperson.html">person</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main data structure used as a value in the hash table.  <a href="structperson.html#details">More...</a><br /></td></tr>
+<tr class="memitem:hashtable" id="r_hashtable"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhashtable.html">hashtable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The hash table structure.  <a href="structhashtable.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ac7c0207aa5a0e10d378be03b68041350" id="r_ac7c0207aa5a0e10d378be03b68041350"><td class="memItemLeft" align="right" valign="top"><a id="ac7c0207aa5a0e10d378be03b68041350" name="ac7c0207aa5a0e10d378be03b68041350"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_NAME</b>&#160;&#160;&#160;256</td></tr>
-<tr class="memdesc:ac7c0207aa5a0e10d378be03b68041350"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum number of characters for a person's name. <br /></td></tr>
-<tr class="memitem:a032503e76d6f69bc67e99e909c8125da" id="r_a032503e76d6f69bc67e99e909c8125da"><td class="memItemLeft" align="right" valign="top"><a id="a032503e76d6f69bc67e99e909c8125da" name="a032503e76d6f69bc67e99e909c8125da"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>TABLE_SIZE</b>&#160;&#160;&#160;10</td></tr>
-<tr class="memdesc:a032503e76d6f69bc67e99e909c8125da"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total number of buckets in the hash table. <br /></td></tr>
+<tr class="memitem:aa031b6a3a5b27df798daaacc350e45f7" id="r_aa031b6a3a5b27df798daaacc350e45f7"><td class="memItemLeft" align="right" valign="top"><a id="aa031b6a3a5b27df798daaacc350e45f7" name="aa031b6a3a5b27df798daaacc350e45f7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DELETED_NODE</b>&#160;&#160;&#160;    ((void *)0xFFFFFFFFFFFFFFFUL)</td></tr>
+<tr class="memdesc:aa031b6a3a5b27df798daaacc350e45f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special marker for deleted entries. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a286d0dfae1bfd7882a42c92aea47736a" id="r_a286d0dfae1bfd7882a42c92aea47736a"><td class="memItemLeft" align="right" valign="top">typedef const char *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a286d0dfae1bfd7882a42c92aea47736a">get_key_func</a>) (const void *)</td></tr>
+<tr class="memdesc:a286d0dfae1bfd7882a42c92aea47736a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function pointer type for extracting a string key from an object.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af84b2404bd93e50d173ef4a4c7c26a35" id="r_af84b2404bd93e50d173ef4a4c7c26a35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af84b2404bd93e50d173ef4a4c7c26a35">init_hash_table</a> ()</td></tr>
-<tr class="memdesc:af84b2404bd93e50d173ef4a4c7c26a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the hash table, setting all entries to NULL.  <br /></td></tr>
-<tr class="memitem:ac8588a40ed5942245242363f13a698f5" id="r_ac8588a40ed5942245242363f13a698f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8588a40ed5942245242363f13a698f5">print_table</a> ()</td></tr>
-<tr class="memdesc:ac8588a40ed5942245242363f13a698f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the current state of the hash table to the console.  <br /></td></tr>
-<tr class="memitem:afbea3b6ce88f22e87f6c568f613bd213" id="r_afbea3b6ce88f22e87f6c568f613bd213"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbea3b6ce88f22e87f6c568f613bd213">hash_table_insert</a> (<a class="el" href="structperson.html">person</a> *p)</td></tr>
-<tr class="memdesc:afbea3b6ce88f22e87f6c568f613bd213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a new person into the hash table using linear probing for collisions.  <br /></td></tr>
-<tr class="memitem:a1b98a149a715d2da6196de0291aa29f2" id="r_a1b98a149a715d2da6196de0291aa29f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structperson.html">person</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b98a149a715d2da6196de0291aa29f2">hash_table_lookup</a> (char *name)</td></tr>
-<tr class="memdesc:a1b98a149a715d2da6196de0291aa29f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks up a person in the hash table by name.  <br /></td></tr>
-<tr class="memitem:a498162c2995692af3bd7818377d51815" id="r_a498162c2995692af3bd7818377d51815"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structperson.html">person</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a498162c2995692af3bd7818377d51815">hash_table_delete</a> (char *name)</td></tr>
-<tr class="memdesc:a498162c2995692af3bd7818377d51815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a person from the hash table by name.  <br /></td></tr>
+<tr class="memitem:a7972b38eedba04f5dfa86a56f51a19b5" id="r_a7972b38eedba04f5dfa86a56f51a19b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7972b38eedba04f5dfa86a56f51a19b5">init_hash_table</a> (<a class="el" href="structhashtable.html">hashtable</a> *ht, <a class="el" href="#a286d0dfae1bfd7882a42c92aea47736a">get_key_func</a> get_key, size_t size)</td></tr>
+<tr class="memdesc:a7972b38eedba04f5dfa86a56f51a19b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the hash table with a given size.  <br /></td></tr>
+<tr class="memitem:a950b814116c633f658b6b37e3dc09d56" id="r_a950b814116c633f658b6b37e3dc09d56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a950b814116c633f658b6b37e3dc09d56">free_hash_table</a> (<a class="el" href="structhashtable.html">hashtable</a> *ht)</td></tr>
+<tr class="memdesc:a950b814116c633f658b6b37e3dc09d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the dynamically allocated table inside the hash table.  <br /></td></tr>
+<tr class="memitem:a96c63c8ae820de5e07d52635e5022658" id="r_a96c63c8ae820de5e07d52635e5022658"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96c63c8ae820de5e07d52635e5022658">print_table</a> (const <a class="el" href="structhashtable.html">hashtable</a> *ht)</td></tr>
+<tr class="memdesc:a96c63c8ae820de5e07d52635e5022658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the current state of the hash table to the console.  <br /></td></tr>
+<tr class="memitem:ade238440ee62e56cd92ac98b42f214c5" id="r_ade238440ee62e56cd92ac98b42f214c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade238440ee62e56cd92ac98b42f214c5">hash_table_insert</a> (<a class="el" href="structhashtable.html">hashtable</a> *ht, void *item)</td></tr>
+<tr class="memdesc:ade238440ee62e56cd92ac98b42f214c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts an object into the hash table using linear probing.  <br /></td></tr>
+<tr class="memitem:a0588d7cad6dc7b5d100e0ba9a394b1a9" id="r_a0588d7cad6dc7b5d100e0ba9a394b1a9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0588d7cad6dc7b5d100e0ba9a394b1a9">hash_table_lookup</a> (const <a class="el" href="structhashtable.html">hashtable</a> *ht, const char *key)</td></tr>
+<tr class="memdesc:a0588d7cad6dc7b5d100e0ba9a394b1a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks up an object in the hash table by its string key.  <br /></td></tr>
+<tr class="memitem:a72749541bf05adc4203490bd72a8d71d" id="r_a72749541bf05adc4203490bd72a8d71d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72749541bf05adc4203490bd72a8d71d">hash_table_delete</a> (<a class="el" href="structhashtable.html">hashtable</a> *ht, const char *key)</td></tr>
+<tr class="memdesc:a72749541bf05adc4203490bd72a8d71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes an object from the hash table by its string key.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file contains the public interface for a simple hash table. </p>
-<dl class="section author"><dt>Author</dt><dd>Alifoo and Friends </dd></dl>
+<div class="textblock"><p>A simple, generic hash table implementation using a dynamic struct. </p>
+<dl class="section author"><dt>Author</dt><dd>Alifoo </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2025-09-03 </dd></dl>
-<p>It is designed to store and manage 'person' structs, providing functions for insertion, lookup, and deletion. </p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a498162c2995692af3bd7818377d51815" name="a498162c2995692af3bd7818377d51815"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a498162c2995692af3bd7818377d51815">&#9670;&#160;</a></span>hash_table_delete()</h2>
+<p>This file provides the public interface for a hash table that can store any kind of data. The table size is dynamic and allocated at runtime. </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
+<a id="a286d0dfae1bfd7882a42c92aea47736a" name="a286d0dfae1bfd7882a42c92aea47736a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a286d0dfae1bfd7882a42c92aea47736a">&#9670;&#160;</a></span>get_key_func</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structperson.html">person</a> * hash_table_delete </td>
+          <td class="memname">typedef const char *(* get_key_func) (const void *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function pointer type for extracting a string key from an object. </p>
+<p>The function takes a pointer to an object and returns a pointer to a string (the key) associated with that object. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a950b814116c633f658b6b37e3dc09d56" name="a950b814116c633f658b6b37e3dc09d56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a950b814116c633f658b6b37e3dc09d56">&#9670;&#160;</a></span>free_hash_table()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_hash_table </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structhashtable.html">hashtable</a> *</td>          <td class="paramname"><span class="paramname"><em>ht</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Deletes a person from the hash table by name. </p>
-<p>This function marks the slot as deleted to preserve the probing chain. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Frees the dynamically allocated table inside the hash table. </p>
+<p>Does not free the stored objects themselves; the user must do that separately.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The name of the person to delete. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ht</td><td>A pointer to the hashtable instance. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the deleted person if found, otherwise NULL. </dd></dl>
 
 </div>
 </div>
-<a id="afbea3b6ce88f22e87f6c568f613bd213" name="afbea3b6ce88f22e87f6c568f613bd213"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbea3b6ce88f22e87f6c568f613bd213">&#9670;&#160;</a></span>hash_table_insert()</h2>
+<a id="a72749541bf05adc4203490bd72a8d71d" name="a72749541bf05adc4203490bd72a8d71d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72749541bf05adc4203490bd72a8d71d">&#9670;&#160;</a></span>hash_table_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * hash_table_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhashtable.html">hashtable</a> *</td>          <td class="paramname"><span class="paramname"><em>ht</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deletes an object from the hash table by its string key. </p>
+<p>This function marks the slot as deleted to preserve the probing chain.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ht</td><td>A pointer to the hashtable instance. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The key string of the object to delete. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the deleted object if found, otherwise NULL. </dd></dl>
+
+</div>
+</div>
+<a id="ade238440ee62e56cd92ac98b42f214c5" name="ade238440ee62e56cd92ac98b42f214c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade238440ee62e56cd92ac98b42f214c5">&#9670;&#160;</a></span>hash_table_insert()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,16 +243,21 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool hash_table_insert </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structperson.html">person</a> *</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structhashtable.html">hashtable</a> *</td>          <td class="paramname"><span class="paramname"><em>ht</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>item</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Inserts a new person into the hash table using linear probing for collisions. </p>
+<p>Inserts an object into the hash table using linear probing. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>A pointer to the person struct to insert. The struct is not copied. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ht</td><td>A pointer to the hashtable instance. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">item</td><td>A pointer to the object to insert. The object is not copied. </td></tr>
   </table>
   </dd>
 </dl>
@@ -203,34 +265,39 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1b98a149a715d2da6196de0291aa29f2" name="a1b98a149a715d2da6196de0291aa29f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b98a149a715d2da6196de0291aa29f2">&#9670;&#160;</a></span>hash_table_lookup()</h2>
+<a id="a0588d7cad6dc7b5d100e0ba9a394b1a9" name="a0588d7cad6dc7b5d100e0ba9a394b1a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0588d7cad6dc7b5d100e0ba9a394b1a9">&#9670;&#160;</a></span>hash_table_lookup()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structperson.html">person</a> * hash_table_lookup </td>
+          <td class="memname">void * hash_table_lookup </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structhashtable.html">hashtable</a> *</td>          <td class="paramname"><span class="paramname"><em>ht</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Looks up a person in the hash table by name. </p>
+<p>Looks up an object in the hash table by its string key. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The name of the person to find. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ht</td><td>A pointer to the hashtable instance. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The key string to search for. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the person if found, otherwise NULL. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the object if found, otherwise NULL. </dd></dl>
 
 </div>
 </div>
-<a id="af84b2404bd93e50d173ef4a4c7c26a35" name="af84b2404bd93e50d173ef4a4c7c26a35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af84b2404bd93e50d173ef4a4c7c26a35">&#9670;&#160;</a></span>init_hash_table()</h2>
+<a id="a7972b38eedba04f5dfa86a56f51a19b5" name="a7972b38eedba04f5dfa86a56f51a19b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7972b38eedba04f5dfa86a56f51a19b5">&#9670;&#160;</a></span>init_hash_table()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,19 +305,35 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void init_hash_table </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structhashtable.html">hashtable</a> *</td>          <td class="paramname"><span class="paramname"><em>ht</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="#a286d0dfae1bfd7882a42c92aea47736a">get_key_func</a></td>          <td class="paramname"><span class="paramname"><em>get_key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initializes the hash table, setting all entries to NULL. </p>
-<p>This function must be called before any other hash table operations. </p>
+<p>Initializes the hash table with a given size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ht</td><td>A pointer to the hashtable instance. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">get_key</td><td>A function that extracts a string key from stored objects. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Number of buckets to allocate for the table. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="ac8588a40ed5942245242363f13a698f5" name="ac8588a40ed5942245242363f13a698f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8588a40ed5942245242363f13a698f5">&#9670;&#160;</a></span>print_table()</h2>
+<a id="a96c63c8ae820de5e07d52635e5022658" name="a96c63c8ae820de5e07d52635e5022658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c63c8ae820de5e07d52635e5022658">&#9670;&#160;</a></span>print_table()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,14 +341,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void print_table </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structhashtable.html">hashtable</a> *</td>          <td class="paramname"><span class="paramname"><em>ht</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Prints the current state of the hash table to the console. </p>
-<p>Useful for debugging and visualizing the table's contents. </p>
+<p>Useful for debugging and visualizing the table's contents.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ht</td><td>A pointer to the hashtable instance. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -282,7 +371,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="hashtable_8h.html">hashtable.h</a></li>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="hashtable_8h.html">hashtable.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

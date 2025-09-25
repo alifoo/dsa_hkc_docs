@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['print_5ftable_0',['print_table',['../hashtable_8h.html#ac8588a40ed5942245242363f13a698f5',1,'hashtable.c']]]
+  ['init_5fhash_5ftable_0',['init_hash_table',['../hashtable_8h.html#a7972b38eedba04f5dfa86a56f51a19b5',1,'hashtable.h']]]
 ];

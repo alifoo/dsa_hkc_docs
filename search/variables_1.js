@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_0',['name',['../structperson.html#a9c24023eeded573e6927ef4c05c94edb',1,'person']]]
+  ['data_0',['data',['../struct_stack.html#a63bb6f348d7911e1c65bcc092d42a1e5',1,'Stack']]]
 ];

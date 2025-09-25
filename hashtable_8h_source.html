@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DSA Hacking Club Library: src/hashtable.h Source File</title>
+<title>DSA Hacking Club Library: include/hashtable.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,47 +92,63 @@ $(function(){initNavTree('hashtable_8h_source.html','',''); });
 </div><!--header-->
 <div class="contents">
 <a href="hashtable_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef HASHTABLE_H</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define HASHTABLE_H</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// --- Public Constants and Definitions ---</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef HASHTABLE_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define HASHTABLE_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="hashtable_8h.html#ac7c0207aa5a0e10d378be03b68041350">   17</a></span><span class="preprocessor">#define MAX_NAME 256  </span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="hashtable_8h.html#a032503e76d6f69bc67e99e909c8125da">   18</a></span><span class="preprocessor">#define TABLE_SIZE 10 </span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordtype">char</span> name[MAX_NAME]; </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordtype">int</span> age;             </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <a class="code hl_struct" href="structperson.html">person</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// --- Public Function Prototypes ---</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="hashtable_8h.html#af84b2404bd93e50d173ef4a4c7c26a35">init_hash_table</a>();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="hashtable_8h.html#ac8588a40ed5942245242363f13a698f5">print_table</a>();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">bool</span> <a class="code hl_function" href="hashtable_8h.html#afbea3b6ce88f22e87f6c568f613bd213">hash_table_insert</a>(<a class="code hl_struct" href="structperson.html">person</a> *p);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><a class="code hl_struct" href="structperson.html">person</a> *<a class="code hl_function" href="hashtable_8h.html#a1b98a149a715d2da6196de0291aa29f2">hash_table_lookup</a>(<span class="keywordtype">char</span> *name);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><a class="code hl_struct" href="structperson.html">person</a> *<a class="code hl_function" href="hashtable_8h.html#a498162c2995692af3bd7818377d51815">hash_table_delete</a>(<span class="keywordtype">char</span> *name);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif </span><span class="comment">// HASHTABLE_H</span></div>
-<div class="ttc" id="ahashtable_8h_html_a1b98a149a715d2da6196de0291aa29f2"><div class="ttname"><a href="hashtable_8h.html#a1b98a149a715d2da6196de0291aa29f2">hash_table_lookup</a></div><div class="ttdeci">person * hash_table_lookup(char *name)</div><div class="ttdoc">Looks up a person in the hash table by name.</div><div class="ttdef"><b>Definition</b> hashtable.c:62</div></div>
-<div class="ttc" id="ahashtable_8h_html_a498162c2995692af3bd7818377d51815"><div class="ttname"><a href="hashtable_8h.html#a498162c2995692af3bd7818377d51815">hash_table_delete</a></div><div class="ttdeci">person * hash_table_delete(char *name)</div><div class="ttdoc">Deletes a person from the hash table by name.</div><div class="ttdef"><b>Definition</b> hashtable.c:78</div></div>
-<div class="ttc" id="ahashtable_8h_html_ac8588a40ed5942245242363f13a698f5"><div class="ttname"><a href="hashtable_8h.html#ac8588a40ed5942245242363f13a698f5">print_table</a></div><div class="ttdeci">void print_table()</div><div class="ttdoc">Prints the current state of the hash table to the console.</div><div class="ttdef"><b>Definition</b> hashtable.c:34</div></div>
-<div class="ttc" id="ahashtable_8h_html_af84b2404bd93e50d173ef4a4c7c26a35"><div class="ttname"><a href="hashtable_8h.html#af84b2404bd93e50d173ef4a4c7c26a35">init_hash_table</a></div><div class="ttdeci">void init_hash_table()</div><div class="ttdoc">Initializes the hash table, setting all entries to NULL.</div><div class="ttdef"><b>Definition</b> hashtable.c:28</div></div>
-<div class="ttc" id="ahashtable_8h_html_afbea3b6ce88f22e87f6c568f613bd213"><div class="ttname"><a href="hashtable_8h.html#afbea3b6ce88f22e87f6c568f613bd213">hash_table_insert</a></div><div class="ttdeci">bool hash_table_insert(person *p)</div><div class="ttdoc">Inserts a new person into the hash table using linear probing for collisions.</div><div class="ttdef"><b>Definition</b> hashtable.c:48</div></div>
-<div class="ttc" id="astructperson_html"><div class="ttname"><a href="structperson.html">person</a></div><div class="ttdoc">The main data structure used as a value in the hash table.</div><div class="ttdef"><b>Definition</b> hashtable.c:11</div></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// --- Public Constants and Definitions ---</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="" data-end="">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="hashtable_8h.html#aa031b6a3a5b27df798daaacc350e45f7">   19</a></span><span class="preprocessor">#define DELETED_NODE                                                           \</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">    ((void *)0xFFFFFFFFFFFFFFFUL) </span></div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="hashtable_8h.html#a286d0dfae1bfd7882a42c92aea47736a">   28</a></span><span class="keyword">typedef</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *(*get_key_func)(<span class="keyword">const</span> <span class="keywordtype">void</span> *);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structhashtable.html">   37</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structhashtable.html#a0eca861b7b717c491148c89936801256">   38</a></span>    <span class="keywordtype">void</span> **<a class="code hl_variable" href="structhashtable.html#a0eca861b7b717c491148c89936801256">table</a>;         </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structhashtable.html#a5e15b839a315077a28d31fe36de74382">   39</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structhashtable.html#a5e15b839a315077a28d31fe36de74382">size</a>;          </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structhashtable.html#a283b5b70e7521d2dcd8291b1ce45e11d">   40</a></span>    <a class="code hl_typedef" href="hashtable_8h.html#a286d0dfae1bfd7882a42c92aea47736a">get_key_func</a> <a class="code hl_variable" href="structhashtable.html#a283b5b70e7521d2dcd8291b1ce45e11d">get_key</a>; </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>} <a class="code hl_struct" href="structhashtable.html">hashtable</a>;</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// --- Public Function Prototypes ---</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="hashtable_8h.html#a7972b38eedba04f5dfa86a56f51a19b5">   52</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="hashtable_8h.html#a7972b38eedba04f5dfa86a56f51a19b5">init_hash_table</a>(<a class="code hl_struct" href="structhashtable.html">hashtable</a> *ht, <a class="code hl_typedef" href="hashtable_8h.html#a286d0dfae1bfd7882a42c92aea47736a">get_key_func</a> get_key, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">void</span> <a class="code hl_function" href="hashtable_8h.html#a950b814116c633f658b6b37e3dc09d56">free_hash_table</a>(<a class="code hl_struct" href="structhashtable.html">hashtable</a> *ht);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">void</span> <a class="code hl_function" href="hashtable_8h.html#a96c63c8ae820de5e07d52635e5022658">print_table</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structhashtable.html">hashtable</a> *ht);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keywordtype">bool</span> <a class="code hl_function" href="hashtable_8h.html#ade238440ee62e56cd92ac98b42f214c5">hash_table_insert</a>(<a class="code hl_struct" href="structhashtable.html">hashtable</a> *ht, <span class="keywordtype">void</span> *item);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keywordtype">void</span> *<a class="code hl_function" href="hashtable_8h.html#a0588d7cad6dc7b5d100e0ba9a394b1a9">hash_table_lookup</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structhashtable.html">hashtable</a> *ht, <span class="keyword">const</span> <span class="keywordtype">char</span> *key);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keywordtype">void</span> *<a class="code hl_function" href="hashtable_8h.html#a72749541bf05adc4203490bd72a8d71d">hash_table_delete</a>(<a class="code hl_struct" href="structhashtable.html">hashtable</a> *ht, <span class="keyword">const</span> <span class="keywordtype">char</span> *key);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#endif </span><span class="comment">// HASHTABLE_H</span></div>
+<div class="ttc" id="ahashtable_8h_html_a0588d7cad6dc7b5d100e0ba9a394b1a9"><div class="ttname"><a href="hashtable_8h.html#a0588d7cad6dc7b5d100e0ba9a394b1a9">hash_table_lookup</a></div><div class="ttdeci">void * hash_table_lookup(const hashtable *ht, const char *key)</div><div class="ttdoc">Looks up an object in the hash table by its string key.</div><div class="ttdef"><b>Definition</b> hashtable.c:69</div></div>
+<div class="ttc" id="ahashtable_8h_html_a286d0dfae1bfd7882a42c92aea47736a"><div class="ttname"><a href="hashtable_8h.html#a286d0dfae1bfd7882a42c92aea47736a">get_key_func</a></div><div class="ttdeci">const char *(* get_key_func)(const void *)</div><div class="ttdoc">Function pointer type for extracting a string key from an object.</div><div class="ttdef"><b>Definition</b> hashtable.h:28</div></div>
+<div class="ttc" id="ahashtable_8h_html_a72749541bf05adc4203490bd72a8d71d"><div class="ttname"><a href="hashtable_8h.html#a72749541bf05adc4203490bd72a8d71d">hash_table_delete</a></div><div class="ttdeci">void * hash_table_delete(hashtable *ht, const char *key)</div><div class="ttdoc">Deletes an object from the hash table by its string key.</div><div class="ttdef"><b>Definition</b> hashtable.c:87</div></div>
+<div class="ttc" id="ahashtable_8h_html_a7972b38eedba04f5dfa86a56f51a19b5"><div class="ttname"><a href="hashtable_8h.html#a7972b38eedba04f5dfa86a56f51a19b5">init_hash_table</a></div><div class="ttdeci">void init_hash_table(hashtable *ht, get_key_func get_key, size_t size)</div><div class="ttdoc">Initializes the hash table with a given size.</div></div>
+<div class="ttc" id="ahashtable_8h_html_a950b814116c633f658b6b37e3dc09d56"><div class="ttname"><a href="hashtable_8h.html#a950b814116c633f658b6b37e3dc09d56">free_hash_table</a></div><div class="ttdeci">void free_hash_table(hashtable *ht)</div><div class="ttdoc">Frees the dynamically allocated table inside the hash table.</div><div class="ttdef"><b>Definition</b> hashtable.c:26</div></div>
+<div class="ttc" id="ahashtable_8h_html_a96c63c8ae820de5e07d52635e5022658"><div class="ttname"><a href="hashtable_8h.html#a96c63c8ae820de5e07d52635e5022658">print_table</a></div><div class="ttdeci">void print_table(const hashtable *ht)</div><div class="ttdoc">Prints the current state of the hash table to the console.</div><div class="ttdef"><b>Definition</b> hashtable.c:41</div></div>
+<div class="ttc" id="ahashtable_8h_html_ade238440ee62e56cd92ac98b42f214c5"><div class="ttname"><a href="hashtable_8h.html#ade238440ee62e56cd92ac98b42f214c5">hash_table_insert</a></div><div class="ttdeci">bool hash_table_insert(hashtable *ht, void *item)</div><div class="ttdoc">Inserts an object into the hash table using linear probing.</div><div class="ttdef"><b>Definition</b> hashtable.c:53</div></div>
+<div class="ttc" id="astructhashtable_html"><div class="ttname"><a href="structhashtable.html">hashtable</a></div><div class="ttdoc">The hash table structure.</div><div class="ttdef"><b>Definition</b> hashtable.h:37</div></div>
+<div class="ttc" id="astructhashtable_html_a0eca861b7b717c491148c89936801256"><div class="ttname"><a href="structhashtable.html#a0eca861b7b717c491148c89936801256">hashtable::table</a></div><div class="ttdeci">void ** table</div><div class="ttdoc">Dynamic array of pointers to stored objects.</div><div class="ttdef"><b>Definition</b> hashtable.h:38</div></div>
+<div class="ttc" id="astructhashtable_html_a283b5b70e7521d2dcd8291b1ce45e11d"><div class="ttname"><a href="structhashtable.html#a283b5b70e7521d2dcd8291b1ce45e11d">hashtable::get_key</a></div><div class="ttdeci">get_key_func get_key</div><div class="ttdoc">Function to extract keys from objects.</div><div class="ttdef"><b>Definition</b> hashtable.h:40</div></div>
+<div class="ttc" id="astructhashtable_html_a5e15b839a315077a28d31fe36de74382"><div class="ttname"><a href="structhashtable.html#a5e15b839a315077a28d31fe36de74382">hashtable::size</a></div><div class="ttdeci">size_t size</div><div class="ttdoc">Number of buckets in the table.</div><div class="ttdef"><b>Definition</b> hashtable.h:39</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="hashtable_8h.html">hashtable.h</a></li>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="hashtable_8h.html">hashtable.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

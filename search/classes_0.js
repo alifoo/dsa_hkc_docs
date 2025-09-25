@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['person_0',['person',['../structperson.html',1,'']]]
+  ['hashtable_0',['hashtable',['../structhashtable.html',1,'']]]
 ];
