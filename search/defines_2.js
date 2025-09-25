@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['table_5fsize_0',['TABLE_SIZE',['../hashtable_8h.html#a032503e76d6f69bc67e99e909c8125da',1,'hashtable.h']]]
+  ['stack_5fempty_0',['STACK_EMPTY',['../stack_8h.html#afceb75332628ecda1b4793a63b70f00c',1,'stack.h']]]
 ];

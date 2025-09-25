@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['free_5fhash_5ftable_0',['free_hash_table',['../hashtable_8h.html#a950b814116c633f658b6b37e3dc09d56',1,'hashtable.c']]]
+  ['create_5fnew_5fnode_0',['create_new_node',['../linkedlist_8h.html#a5324493cceaf53a4926a80136574ed13',1,'linkedlist.c']]]
 ];
