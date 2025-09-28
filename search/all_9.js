@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['print_5ftable_0',['print_table',['../hashtable_8h.html#a96c63c8ae820de5e07d52635e5022658',1,'hashtable.c']]],
-  ['printlist_1',['printlist',['../linkedlist_8h.html#a0176c144e5c37ddffe32d8de5a1e2e5d',1,'linkedlist.c']]],
-  ['printqueue_2',['printqueue',['../queue_8h.html#aaa6dce7ad5efb4550648468802b665be',1,'queue.c']]]
+  ['next_0',['next',['../structnode.html#a111a569ab2765add9b91c9f94cf9f063',1,'node']]],
+  ['node_1',['node',['../structnode.html',1,'']]],
+  ['node_5ft_2',['node_t',['../linkedlist_8h.html#a7c02633e18d6aa5f58539b75f08753d9',1,'node_t:&#160;linkedlist.h'],['../queue_8h.html#a7c02633e18d6aa5f58539b75f08753d9',1,'node_t:&#160;queue.h']]]
 ];

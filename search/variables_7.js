@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_0',['value',['../structnode.html#a1df258d4663fc36cfd0d5d93588aa21f',1,'node']]]
+  ['size_0',['size',['../structhashtable.html#a5e15b839a315077a28d31fe36de74382',1,'hashtable']]]
 ];

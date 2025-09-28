@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['data_0',['data',['../struct_stack.html#a63bb6f348d7911e1c65bcc092d42a1e5',1,'Stack']]],
-  ['deleted_5fnode_1',['DELETED_NODE',['../hashtable_8h.html#aa031b6a3a5b27df798daaacc350e45f7',1,'hashtable.h']]],
-  ['dequeue_2',['dequeue',['../queue_8h.html#a6fa33e88457425d0fe06b8261388f84a',1,'queue.c']]],
-  ['dsa_5fhkc_2eh_3',['dsa_hkc.h',['../dsa__hkc_8h.html',1,'']]]
+  ['capacity_0',['capacity',['../struct_stack.html#a9d88966b156fd4547e9b8a2e7fe48427',1,'Stack']]],
+  ['create_5fnew_5fnode_1',['create_new_node',['../linkedlist_8h.html#a5324493cceaf53a4926a80136574ed13',1,'linkedlist.c']]],
+  ['createnode_2',['createnode',['../bst_8h.html#a35bec30b5527a26ffd8b111956daaa3f',1,'bst.c']]]
 ];
